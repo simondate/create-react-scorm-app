@@ -8,7 +8,7 @@ class CompleteButton extends React.Component {
 
     render() {
         return (<div>
-            <p>Click me to report completition to SCORM</p>
+            <p>Click the button to report completition to the LMS.</p>
             <button onClick={this.buttonClick.bind(this)}>Complete</button>
         </div>);
     };
