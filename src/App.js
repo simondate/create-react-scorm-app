@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Learner from './components/Learner';
+import Scorm from './scorm/Scorm';
+import CompleteButton from './components/CompleteButton';
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+        Scorm.init();
+        this.state = {
+            learnerName: Scorm.getLearnerName()
+        }
+    }
+
+    finish() {
+        Scorm.finish();
+    }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <Learner name={this.state.learnerName} />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <CompleteButton completeActivity={this.finish.bind(this)}/>
       </div>
     );
   }
