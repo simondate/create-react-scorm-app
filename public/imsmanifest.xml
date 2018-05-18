@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no" ?>
+<!--
+Single SCO with basic runtime calls. SCORM 1.2.
+
+Provided by Rustici Software - http://www.scorm.com
+
+This example demonstrates the use of basic runtime calls in a multi-page SCO. It
+includes a demonstration of bookmarking, status reporting (completion and success),
+score and time. It also includes the addition of a basic "controller" for providing
+intra-SCO navigation.
+-->
+
+<manifest identifier="com.scorm.golfsamples.runtime.basicruntime.12" version="1"
+         xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+         xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                             http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                             http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+	<organizations default="Kings_online">
+		<organization identifier="Kings_online">
+			<title>Bertrand game</title>
+			<item identifier="item_1" identifierref="resource_1">
+				<title>Bertrand game</title>
+			</item>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="resource_1" type="webcontent" adlcp:scormtype="sco" href="./index.html">
+      <file href="game/index.html"/>
+      <file href="game/index.js"/>
+      <file href="game/stylesheet.css"/>
+		</resource>
+	</resources>
+</manifest>
