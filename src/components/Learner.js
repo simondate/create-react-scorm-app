@@ -4,7 +4,7 @@ class ModalButton extends React.Component {
 
   lmsCheck() {
       if(this.props.name === "null") {
-          return "It seems like we couldn't find your real name!"
+          return "Uh oh! It seems like we couldn't find your real name!"
       }
       return "";
   }
