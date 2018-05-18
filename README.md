@@ -1,6 +1,6 @@
 # create-react-scorm-app
 
-A boilerplate project that extends Facebook's [create-react-app](https://github.com/facebook/create-react-app) adding [SCORM](https://scorm.com/scorm-explained/) functionality to send and receive data to a LMS.
+A boilerplate project that extends Facebook's [create-react-app](https://github.com/facebook/create-react-app) adding [SCORM](https://scorm.com/scorm-explained/) functionality to receive and send data to an LMS.
 
 ![Example gif](https://cdn.rawgit.com/simondate/assets/a5cf1000/scorm.gif)
 ## Installation

@@ -18,8 +18,14 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.Mcq {
+    background-color: #222;
+    color: white;
 }
 
 @keyframes App-logo-spin {

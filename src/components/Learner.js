@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ModalButton extends React.Component {
+class Learner extends React.Component {
 
   lmsCheck() {
       if(this.props.name === "null") {
@@ -17,4 +17,4 @@ class ModalButton extends React.Component {
   };
 };
 
-export default ModalButton;
+export default Learner;
