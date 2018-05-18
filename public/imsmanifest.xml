@@ -22,11 +22,11 @@ intra-SCO navigation.
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
   </metadata>
-	<organizations default="Kings_online">
-		<organization identifier="Kings_online">
-			<title>Bertrand game</title>
+	<organizations default="Simon Date">
+		<organization identifier="Simon Date">
+			<title>Create-react-scorm-app</title>
 			<item identifier="item_1" identifierref="resource_1">
-				<title>Bertrand game</title>
+				<title>Create-react-scorm-app</title>
 			</item>
 		</organization>
 	</organizations>
