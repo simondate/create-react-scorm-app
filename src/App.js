@@ -29,7 +29,9 @@ class App extends Component {
             <main>
                 <CompleteButton completeActivity={this.finish.bind(this)}/>
 
-                <Mcq question="What is 10*10" correctAnswer={0} answers={["100","20"]}/>
+                <Mcq question="What is 10*10?" correctAnswer={0} answers={["100","20"]}/>
+                <Mcq question="What is the capital of Spain?" correctAnswer={2} answers={["Barcelona","Lisbon", "Madrid"]}/>
+                <Mcq question="Which US President's office commissioned the creation of SCORM?" correctAnswer={3} answers={["Donald Trump","Barrack Obama", "Ronald Reagan", "Bill Clinton"]}/>
             </main>
         </div>);
     }
