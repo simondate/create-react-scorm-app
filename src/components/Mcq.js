@@ -34,13 +34,14 @@ class Mcq extends React.Component {
     handleFormSubmit(formSubmitEvent) {
         formSubmitEvent.preventDefault();
         this.setState({answered: true});
+        this.props.result(this.state.selectedOption === this.props.correctAnswer, this.props.answers[this.state.selectedOption]);
     }
 
     currentState() {
         if(!this.state.answered) {
             return <form onSubmit={this.handleFormSubmit.bind(this)}>
             {this.renderAnswers()}
-            <button className="btn btn-default" type="submit">Save</button>
+            <button className="btn btn-default" type="submit">Submit</button>
         </form>;
         } else {
             return <div>{this.checkCorrectAnswer()}</div>
@@ -49,9 +50,9 @@ class Mcq extends React.Component {
 
     checkCorrectAnswer() {
         if(this.state.selectedOption === this.props.correctAnswer) {
-            return `yes, ${this.props.answers[this.props.correctAnswer]} is the correct answer`;
+            return `yes, ${this.props.answers[this.props.correctAnswer]} is the correct answer.`;
         } else {
-            return `You answered ${this.props.answers[this.state.selectedOption]}. Sorry, but the correct answer is ${this.props.answers[this.props.correctAnswer]}`
+            return `You answered ${this.props.answers[this.state.selectedOption]}. Sorry, but the correct answer is ${this.props.answers[this.props.correctAnswer]}.`
         }
     }
 
