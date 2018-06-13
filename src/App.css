@@ -26,6 +26,8 @@ main {
 .Mcq {
     background-color: #222;
     color: white;
+    padding: 20px;
+    margin: 10px;
 }
 
 @keyframes App-logo-spin {

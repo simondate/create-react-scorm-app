@@ -5,7 +5,8 @@ class Mcq extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedOption: 0
+            selectedOption: 0,
+            answered: false
         }
     }
 
@@ -32,19 +33,33 @@ class Mcq extends React.Component {
 
     handleFormSubmit(formSubmitEvent) {
         formSubmitEvent.preventDefault();
-        if(this.state.selectedOption === this.props.correctAnswer)
-            console.log('Correct');
-        else
-            console.log('Incorrect');
+        this.setState({answered: true});
+    }
+
+    currentState() {
+        if(!this.state.answered) {
+            return <form onSubmit={this.handleFormSubmit.bind(this)}>
+            {this.renderAnswers()}
+            <button className="btn btn-default" type="submit">Save</button>
+        </form>;
+        } else {
+            return <div>{this.checkCorrectAnswer()}</div>
+        }
+    }
+
+    checkCorrectAnswer() {
+        if(this.state.selectedOption === this.props.correctAnswer) {
+            return `yes, ${this.props.answers[this.props.correctAnswer]} is the correct answer`;
+        } else {
+            return `You answered ${this.props.answers[this.state.selectedOption]}. Sorry, but the correct answer is ${this.props.answers[this.props.correctAnswer]}`
+        }
     }
 
     render() {
-        return (<div className="Mcq">
+        return (
+            <div className="Mcq">
             <p>{this.props.question}</p>
-            <form onSubmit={this.handleFormSubmit.bind(this)}>
-            {this.renderAnswers()}
-            <button className="btn btn-default" type="submit">Save</button>
-            </form>
+            {this.currentState()}
         </div>);
     };
 };
