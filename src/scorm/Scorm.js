@@ -9,7 +9,7 @@ let Scorm = {
     return SCORM.get('cmi.core.student_name');
   },
 
-  submitMCQ(correct) {
+  submitMCQ(correct, response) {
     let nextIndex = SCORM.get("cmi.interactions._count", true);
     SCORM.set("cmi.interactions." + nextIndex + ".id",  "round_" + nextIndex);
     SCORM.set("cmi.interactions." + nextIndex + ".type", "choice");
