@@ -19,7 +19,7 @@ class Mcq extends React.Component {
 
     renderAnswers() {
         let context = this;
-        return this.props.answers.map(function(answer, index) {
+        return this.props.properties.answers.map(function(answer, index) {
             return <div className="answer" key={index}>
                   <input type="radio" value={index}
                     checked={context.state.selectedOption === index}
@@ -34,7 +34,7 @@ class Mcq extends React.Component {
     handleFormSubmit(formSubmitEvent) {
         formSubmitEvent.preventDefault();
         this.setState({answered: true});
-        this.props.result(this.state.selectedOption === this.props.correctAnswer, this.props.answers[this.state.selectedOption]);
+        this.props.result(this.state.selectedOption === this.props.properties.correctAnswer, this.props.properties.answers[this.state.selectedOption]);
     }
 
     currentState() {
@@ -49,17 +49,17 @@ class Mcq extends React.Component {
     }
 
     checkCorrectAnswer() {
-        if(this.state.selectedOption === this.props.correctAnswer) {
-            return `yes, ${this.props.answers[this.props.correctAnswer]} is the correct answer.`;
+        if(this.state.selectedOption === this.props.properties.correctAnswer) {
+            return `yes, ${this.props.properties.answers[this.props.properties.correctAnswer]} is the correct answer.`;
         } else {
-            return `You answered ${this.props.answers[this.state.selectedOption]}. Sorry, but the correct answer is ${this.props.answers[this.props.correctAnswer]}.`
+            return `You answered ${this.props.properties.answers[this.state.selectedOption]}. Sorry, but the correct answer is ${this.props.properties.answers[this.props.properties.correctAnswer]}.`
         }
     }
 
     render() {
         return (
             <div className="Mcq">
-            <p>{this.props.question}</p>
+            <p>{this.props.properties.question}</p>
             {this.currentState()}
         </div>);
     };

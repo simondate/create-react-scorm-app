@@ -1,0 +1,26 @@
+[
+  {
+    "_type": "Mcq",
+    "_properties": {
+      "question": "What is 10*10?",
+      "correctAnswer": 0,
+      "answers": [100,20]
+    }
+  },
+  {
+    "_type": "Mcq",
+    "_properties": {
+      "question": "What is the capital of Spain?",
+      "correctAnswer": 2,
+      "answers": ["Barcelona","Lisbon", "Madrid"]
+    }
+  },
+  {
+    "_type": "Mcq",
+    "_properties": {
+      "question": "What is the capital of Spain?",
+      "correctAnswer": 2,
+      "answers": ["Barcelona","Lisbon", "Madrid"]
+    }
+  }
+]
