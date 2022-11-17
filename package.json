@@ -6,7 +6,7 @@
     "pipwerks-scorm-api-wrapper": "^0.1.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.4.4"
   },
   "homepage": "./",
   "scripts": {
